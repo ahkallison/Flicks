@@ -15,6 +15,8 @@ import com.codepath.flicks.models.Movie;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 /**
@@ -104,16 +106,21 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         // track view objects
         ImageView ivPosterImage;
         ImageView ivBackdropImage;
-        TextView tvTitle;
-        TextView tvOverview;
+//        TextView tvTitle;
+//        TextView tvOverview;
+//        @BindView(R.id.ivPosterImage) ImageView ivPosterImage;
+//        @BindView(R.id.ivBackdropImage) ImageView ivBackdropImage;
+        @BindView(R.id.tvOverview) TextView tvOverview;
+        @BindView(R.id.tvTitle) TextView tvTitle;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            ButterKnife.bind(this, itemView);
             // lookup view objects by id
             ivPosterImage = (ImageView) itemView.findViewById(R.id.ivPosterImage);
             ivBackdropImage = (ImageView) itemView.findViewById(R.id.ivBackdropImage);
-            tvOverview = (TextView) itemView.findViewById(R.id.tvOverview);
-            tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
+//            tvOverview = (TextView) itemView.findViewById(R.id.tvOverview);
+//            tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
         }
     }
 }
