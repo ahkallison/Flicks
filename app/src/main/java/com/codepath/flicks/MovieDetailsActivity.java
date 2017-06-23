@@ -34,9 +34,9 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
     @BindView(R.id.tvTitle) TextView tvTitle;
     @BindView(R.id.tvOverview) TextView tvOverview;
     @BindView(R.id.rbVoteAverage) RatingBar rbVoteAverage;
+//    @BindView(R.id.releaseDate) TextView releaseDate;
     // ADDED resolve the player view from the layout
     @BindView(R.id.player) YouTubePlayerView playerView;
-//    YouTubePlayerView playerView;
 
     // key for movie youtube key
     private final static String MOVIE_ID = "MOVIE_ID";
@@ -63,9 +63,10 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
         // ADDED
         getVideos();
 
-        // set the title and overview
+        // set the title, overview, and release date
         tvTitle.setText(movie.getTitle());
         tvOverview.setText(movie.getOverview());
+//        releaseDate.setText(movie.getReleased());
 
         // vote average is 0..10, convert to 0..5 by dividing by 2
         float voteAverage = movie.getVoteAverage().floatValue();
