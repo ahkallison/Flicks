@@ -37,11 +37,13 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
     @BindView(R.id.releaseDate) TextView releaseDate;
     @BindView(R.id.player) YouTubePlayerView playerView;
 
+    // declare client
+    AsyncHttpClient client;
+
     // key for movie youtube key
     private final static String MOVIE_ID = "MOVIE_ID";
 
-    AsyncHttpClient client;
-
+    // tag for logging errors
     private static final String TAG = "DetailsActivity";
 
     @Override
@@ -59,7 +61,7 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
         Log.d("MovieDetailsActivity", String.format("Showing details for '%s'", movie.getTitle()));
 
-        // ADDED
+        // call HTTP GET request
         getVideos();
 
         // set the title, overview, and release date
@@ -89,9 +91,7 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
                     JSONObject video = results.getJSONObject(0);
                     String youtube_key = video.getString("key");
 
-                    // ADDED
                     // initialize with API key stored in secrets.xml
-                    // temporary test video id -- TODO replace with movie trailer video id
                     final String videoId = youtube_key;
                     playerView.initialize(getString(R.string.youtube_api_key), new YouTubePlayer.OnInitializedListener() {
                         @Override
@@ -110,14 +110,12 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
                     });
                 } catch (JSONException e) {
                         Log.e(TAG, "Failed to parse");
-//                    logError("Failed to parse now playing movies", e, true);
                 }
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 Log.e(TAG, "Failed to get data");
-//                logError("Failed the get data from now_playing endpoint", throwable, true);
             }
         });
     }
