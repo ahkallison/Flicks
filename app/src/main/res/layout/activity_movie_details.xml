@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBack"
     tools:context="com.codepath.flicks.MovieDetailsActivity">
 
 <LinearLayout
@@ -21,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Movie Title"
+        android:textColor="@color/colorTitle"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:layout_below="@+id/linearLayout"
         android:layout_alignParentLeft="true"
@@ -31,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:textColor="@android:color/darker_gray"
         android:layout_below="@+id/rbVoteAverage"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
