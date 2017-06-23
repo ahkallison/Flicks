@@ -21,6 +21,7 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/ivPosterImage"
         android:text="Movie Title"
+        android:textColor="@color/colorTitle"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -32,6 +33,9 @@
         android:layout_below="@+id/tvTitle"
         android:layout_toRightOf="@+id/ivPosterImage"
         android:text="Movie overview and synopsis"
+        android:textColor="@android:color/darker_gray"
+        android:ellipsize="end"
+        android:maxLines="4"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 </RelativeLayout>
