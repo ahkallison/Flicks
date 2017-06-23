@@ -37,8 +37,7 @@ public class MovieListActivity extends AppCompatActivity {
     AsyncHttpClient client;
     // the list of currently playing movies
     ArrayList<Movie> movies;
-    // the recycler view
-//    RecyclerView rvMovies;
+    // resolve the recycler view
     @BindView(R.id.rvMovies) RecyclerView rvMovies;
     // the adapter wired to the recycler view
     MovieAdapter adapter;
@@ -57,8 +56,7 @@ public class MovieListActivity extends AppCompatActivity {
         adapter = new MovieAdapter(movies);
         // applying ButterKnife
         ButterKnife.bind(this);
-        // resolve the recycler view and connect a layout manager and the adapter
-//        rvMovies = (RecyclerView) findViewById(R.id.rvMovies);
+        // connect a layout manager and the adapter
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
         rvMovies.setAdapter(adapter);
 
