@@ -26,8 +26,8 @@
         android:textSize="30sp"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:layout_below="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="5dp" />
+        android:layout_centerHorizontal="false"
+        android:layout_marginLeft="10dp" />
 
 
     <TextView
@@ -37,7 +37,8 @@
         android:text="TextView"
         android:textColor="@color/colorTitle"
         android:layout_below="@+id/tvTitle"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="false"
+        android:layout_marginLeft="10dp" />
 
     <RatingBar
         android:id="@+id/rbVoteAverage"
@@ -47,8 +48,9 @@
         android:numStars="5"
         android:stepSize="0.5"
         android:layout_below="@+id/releaseDate"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
+        android:layout_centerHorizontal="false"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp" />
 
     <TextView
         android:id="@+id/tvOverview"

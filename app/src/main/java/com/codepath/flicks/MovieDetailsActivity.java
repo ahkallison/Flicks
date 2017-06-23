@@ -35,7 +35,6 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
     @BindView(R.id.tvOverview) TextView tvOverview;
     @BindView(R.id.rbVoteAverage) RatingBar rbVoteAverage;
     @BindView(R.id.releaseDate) TextView releaseDate;
-    // ADDED resolve the player view from the layout
     @BindView(R.id.player) YouTubePlayerView playerView;
 
     // key for movie youtube key
