@@ -24,12 +24,12 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] Changed title bar/background/text colors
-* [ ] Modified rating bar styling
-* [ ] Added release date
-* [ ] Adjusted margins on main activity and details activity
-* [ ] Rendered trailer on details activity
-* [ ] Implemented ellipses functionality for long descriptions and titles on main activity
+* [x] Changed title bar/background/text colors
+* [x] Modified rating bar styling
+* [x] Added release date
+* [x] Adjusted margins on main activity and details activity
+* [x] Rendered trailer on details activity
+* [x] Implemented ellipses functionality for long descriptions and titles on main activity
 
 ## Video Walkthrough
 
